@@ -4,16 +4,56 @@ export class Bounds2 {
 
 	constructor(x, y, w, h) 
 	{
+		this.origin = new Vector2()
+		this.size = new Vector2()
+
 		this.x=x
 		this.y=y
 		this.w=w
 		this.h=h
 
-		this.origin = new Vector2(this.x, this.y)
-		this.size = new Vector2(this.w, this.h)
-
 		this.centre = this.origin.add(this.size.scale(0.5))
 
+	}
+
+	get x()
+	{
+		return this.origin.x
+	}
+
+	set x(val)
+	{
+		this.origin.x = val
+	}
+
+	get y()
+	{
+		return this.origin.y
+	}
+
+	set y(val)
+	{
+		this.origin.y = val
+	}
+
+	get w()
+	{
+		return this.size.w
+	}
+
+	set w(val)
+	{
+		this.size.w = val
+	}
+
+	get h()
+	{
+		return this.size.h
+	}
+	
+	set h(val)
+	{
+		this.size.h = val
 	}
 
 	scale(factor)
