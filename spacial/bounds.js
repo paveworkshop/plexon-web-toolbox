@@ -38,22 +38,22 @@ export class Bounds2 {
 
 	get w()
 	{
-		return this.size.w
+		return this.size.x
 	}
 
 	set w(val)
 	{
-		this.size.w = val
+		this.size.x = val
 	}
 
 	get h()
 	{
-		return this.size.h
+		return this.size.y
 	}
 	
 	set h(val)
 	{
-		this.size.h = val
+		this.size.y = val
 	}
 
 	scale(factor)
